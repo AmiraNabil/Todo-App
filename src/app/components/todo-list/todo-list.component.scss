@@ -1,0 +1,76 @@
+$primary: #C1292E; 
+$neutral : rgb(241, 241, 241);
+
+.todo-app{
+	box-shadow: 0px 2px 8px rgba($color: #000, $alpha: 0.25);
+	width: 500px;
+	overflow: hidden;
+	border-radius: 15px;
+	font-size: 18px;
+	input{
+		border: none;
+		box-shadow: none;
+		background-color: $neutral;
+		border-radius: 0 !important;
+		word-wrap: break-word;
+	}
+	.todo-list.done .content{
+		text-decoration: line-through;
+	}
+	.todo-list.done .check{
+		background-color: $primary;
+	}
+	i{
+		font-size: 19px;
+		cursor: pointer;
+	
+	}
+	.title{
+		background-color: $primary;
+		display: flex;
+		color: #fff;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 15px 10px;
+	}
+	.todo-list{
+		padding: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid gainsboro;
+		&:last-of-type {
+			border-bottom: 0;
+		}
+		.trash{
+			color: $primary;
+			margin-left: 20px;
+		}
+	}
+	@media (max-width: 567px){
+		width: 400px;
+	}
+	@media (max-width: 420px){
+		width: 300px;
+	}
+	@media (max-width: 320px){
+		width: 250px;
+		font-size: 16px;
+		i{
+			font-size: 16px;		
+		}
+	}
+	form{
+		position: relative;
+	}
+	.submit-btn{
+		position: absolute;
+		top: 7px;
+		right: 5px;
+		background-color: $primary;
+		border-radius: 15px !important;
+		&:hover{
+			box-shadow: 0px 2px 8px rgba($color: #000, $alpha: 0.25);
+		}
+	}
+}
