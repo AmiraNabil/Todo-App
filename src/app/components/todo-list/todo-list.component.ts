@@ -10,7 +10,9 @@ export class TodoListComponent{
   todos: Todo[];
   inputTodo: string = "";
   show:boolean = false
+  currentYear!: any
   constructor(){
+    this.currentYear = new Date().getFullYear();
     this.todos = [
       {content: 'Go to the Park', done: false},
       {content: 'Cook Lunch', done: false}

@@ -7,7 +7,7 @@
 		<div *ngIf="show">
 			<form (ngSubmit)="addTodo()">
 				<input type="text" name="inputTodo" class="form-control form-control-lg" [(ngModel)]="inputTodo"
-				placeholder="Add Todo" >
+				placeholder="Add Todo" onfocus="this.placeholder=''" onblur="this.placeholder='Add Todo'">
 				<input type="submit" value="Add" name="inputTodo" class=" btn btn-primary submit-btn">
 			</form>
 		</div>
@@ -17,5 +17,16 @@
 			<div (click)="deleteTodo(i)"><i class="fa-solid fa-trash trash"></i></div>
 		</div>
 	</div>	
+
+
 </div>
 
+<div class="copy-right pt-5 pb-4 text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				Copyright &copy; {{currentYear}} All rights reserved to <a href="https://www.linkedin.com/in/amira-nabil-an100/" target="_blank"><strong>Amira Nabil</strong></a>
+			</div>
+		</div>
+	</div>
+</div>
